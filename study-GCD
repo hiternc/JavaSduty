@@ -1,0 +1,59 @@
+/*GCD最大公约数
+ * for循环法
+ * 辗转相除法method of successive division
+ * 
+ * 
+ * */
+package Hello;
+
+import java.util.Scanner;
+
+public class GCD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//	MSD(null);
+		forloop(null);	
+	}
+	
+	public static void MSD(String[] args){
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int oa=a;
+		int ob=b;
+		while(b!=0)
+		{
+			int r=a%b;
+			System.out.println(a+","+b+","+r);
+			a=b;
+			b=r;
+			
+		}
+		System.out.println(oa+"和"+ob+"的最大公约数是"+a);
+	
+	}
+	
+	public static void forloop(String[] args){
+		
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int yue=1;
+		for(int i=2;i<=a&&i<=b;i++)
+		{
+			if(a%i==0 & b%i ==0 )
+			{
+				yue=i;
+				
+			}
+			
+		}
+
+		System.out.println(yue);
+		
+		
+		
+	}
+
+}
