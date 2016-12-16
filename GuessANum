@@ -1,0 +1,35 @@
+/*Java 学习
+*猜数游戏
+*Guess number game
+*
+*
+*/
+package Hello;
+
+import java.util.Scanner;
+
+public class GuessANum {
+
+	public static void main(String[] args) {
+	
+		Scanner in = new Scanner(System.in);
+		int number = (int)(Math.random()*100+1);//random num from 1 to 100
+		int a;
+		int count=0;
+		do{
+			a = in.nextInt();
+			count+=1;
+			if(a>number)
+			{
+				System.out.println("big");
+			}
+			else if(a<number)
+			{
+				System.out.println("small");
+			}	
+		}while(a !=number);
+		System.out.println("right answer is "+number+" and you guess "+count+" times.");
+		
+	}
+
+}
