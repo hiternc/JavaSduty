@@ -1,0 +1,34 @@
+/*java学习练习
+ * 知识点：while
+ * 
+ * 
+ * 
+ * 
+ * */
+package Hello;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		int count=0;
+		int sum=0;
+		while(num!=-1)
+		{
+			count++;
+			sum+=num;;
+			//count++;
+			num = in.nextInt();
+			
+		}
+		if(count>0)
+		{
+			System.out.println("ACCOUNT:"+count+"sum:"+sum);
+		}
+	}
+
+}
